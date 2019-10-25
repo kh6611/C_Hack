@@ -21,6 +21,10 @@ public class Shoukan : MonoBehaviour
     //召還者（マモナー）のMPをテキスト表示
     private Text mamonerMpText;
 
+    //勝利テキスト
+    private Text syouriText;
+
+
     //スライムを選択
     public void Srime()
 	{
@@ -76,17 +80,26 @@ public class Shoukan : MonoBehaviour
 
 	private void Update()
 	{
-		//PointerEventData pointer = new PointerEventData(EventSystem.current);
-		//変更する
-		//pointer.position = Input.mousePosition;
-		//List<RaycastResult> result = new List<RaycastResult>();
-		//EventSystem.current.RaycastAll(pointer, result);
-		//boolean eleaFlag = true;
-		//if (raycastResult.gameObject.name != "UI"){flag = ture;}else{flag = false}
 
-		//TODO もし選択エリアでない場合の分岐を追加
-		//MPがから０でない場合、左クリックした位置に召還する
-		if (mamonerMp > 0 && Input.GetMouseButtonDown(1) )
+        if (mamonerMp <= 0)
+        {
+            //Textオブジェクトをキャッシュ
+            syouriText = GameObject.Find("SYOURIText").GetComponent<Text>();
+            //現在HPを画面に表示
+            syouriText.text = "勝利";
+        }
+
+        //PointerEventData pointer = new PointerEventData(EventSystem.current);
+        //変更する
+        //pointer.position = Input.mousePosition;
+        //List<RaycastResult> result = new List<RaycastResult>();
+        //EventSystem.current.RaycastAll(pointer, result);
+        //boolean eleaFlag = true;
+        //if (raycastResult.gameObject.name != "UI"){flag = ture;}else{flag = false}
+
+        //TODO もし選択エリアでない場合の分岐を追加
+        //MPがから０でない場合、左クリックした位置に召還する
+        if (mamonerMp > 0 && Input.GetMouseButtonDown(1) )
 		{
 			//TODO
 			//プレイヤーの現在位置　後々変更。スマホでタップした位置に変える。
@@ -112,6 +125,10 @@ public class Shoukan : MonoBehaviour
             mamonerMpText = GameObject.Find("Health Text").GetComponent<Text>();
             //現在HPを画面に表示
             mamonerMpText.text = "MP:" + mamonerMp.ToString();
+
+ 
+
+
         }
 
 		//気絶時の行動　仮実装したが、不要となった機能
@@ -157,6 +174,8 @@ public class Shoukan : MonoBehaviour
             mamonerMpText = GameObject.Find("Health Text").GetComponent<Text>();
             //現在HPを画面に表示
             mamonerMpText.text = "MP:" + mamonerMp.ToString();
+
+
         }
 
     }
