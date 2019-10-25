@@ -1,0 +1,4 @@
+/Users/yoshimatsutakuya/Documents/TeamC_Mammoner/Mammoner/obj/Debug/Assembly-CSharp.csprojResolveAssemblyReference.cache
+/Users/yoshimatsutakuya/Documents/TeamC_Mammoner/Mammoner/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
+/Users/yoshimatsutakuya/Documents/TeamB_Mammoner/Mammoner/obj/Debug/Assembly-CSharp.csprojResolveAssemblyReference.cache
+/Users/yoshimatsutakuya/Documents/TeamB_Mammoner/Mammoner/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
